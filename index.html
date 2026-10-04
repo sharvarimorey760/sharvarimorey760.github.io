@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sharvari Morey | Aspiring Data Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light dark;--bg:#f6f7f9;--panel:#ffffff;--line:#dde2ea;--text:#1b2433;--muted:#566175;--signal:#1f4e8c;--alert:#a8480c;--on:#ffffff;
+--head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.0625rem/1.6 var(--body)}
+a{color:var(--signal)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--alert);outline-offset:3px;border-radius:4px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;gap:1rem;flex-wrap:wrap}
+nav strong{font:700 1.1rem var(--head)}
+nav div{display:flex;gap:1.25rem}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--text)}
+.hero{padding:3.5rem 0 3rem}
+h1{font:700 clamp(2.2rem,6vw,3.4rem)/1.1 var(--head);margin:0 0 .5rem;letter-spacing:-.01em}
+.lede{color:var(--muted);max-width:36rem;margin:0 0 1.75rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:6px;text-decoration:none;font-weight:500;border:1px solid var(--line);color:var(--text)}
+.btn.main{background:var(--signal);color:var(--on);border-color:var(--signal)}
+.btn:hover{border-color:var(--signal)}
+.trace{margin-top:2.5rem;border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:1rem 1rem .5rem}
+.trace svg{display:block;width:100%;height:auto}
+.trace p{margin:.25rem 0 .5rem;font-size:.9rem;color:var(--muted)}
+.line{fill:none;stroke:var(--signal);stroke-width:2;stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.4s ease-out .3s forwards}
+.spike{opacity:0;animation:pop .4s ease-out 1.9s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.line{animation:none;stroke-dashoffset:0}.spike{animation:none;opacity:1}}
+section{padding:3rem 0;border-top:1px solid var(--line)}
+h2{font:700 1.8rem var(--head);margin:0 0 .5rem}
+.sub{color:var(--muted);margin:0 0 1.25rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.25rem}
+.chip{font:inherit;font-size:.95rem;color:var(--text);background:var(--panel);border:1px solid var(--line);padding:.35rem .85rem;border-radius:999px;cursor:pointer}
+.chip:hover{border-color:var(--signal)}
+.chip[aria-pressed=true]{background:var(--signal);color:var(--on);border-color:var(--signal)}
+.projects{display:grid;gap:1rem}
+.proj{background:var(--panel);border:1px solid var(--line);border-radius:8px;transition:opacity .2s,border-color .2s}
+.proj.lead{border-color:var(--signal)}
+.proj.dim{opacity:.3}
+.proj summary{list-style:none;cursor:pointer;padding:1.25rem;display:block}
+.proj summary::-webkit-details-marker{display:none}
+.proj h3{font:700 1.25rem var(--head);margin:0 0 .35rem}
+.proj .one{margin:0 0 .75rem;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;font-size:.85rem;color:var(--signal)}
+.tags span{border:1px solid var(--line);padding:.1rem .55rem;border-radius:4px}
+.more{display:block;margin-top:.75rem;font-size:.9rem;color:var(--alert)}
+.proj[open] .more::after{content:"Hide details"}
+.proj:not([open]) .more::after{content:"Show details"}
+.proj ul{margin:0;padding:0 1.25rem 1.25rem 2.5rem;color:var(--text)}
+.proj li{margin:.4rem 0}
+.grid2{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:1.1rem 1.25rem}
+.box h3{font:700 1rem var(--head);margin:0 0 .4rem;color:var(--signal)}
+.box p{margin:0;color:var(--text)}
+.learn{border-color:var(--alert)}
+.learn h3{color:var(--alert)}
+.list{margin:0;padding-left:1.2rem}
+.list li{margin:.3rem 0}
+.contact{display:flex;gap:1.25rem;flex-wrap:wrap}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+.role{font:500 1.35rem var(--head);color:var(--signal);margin:0 0 1rem}.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:1rem;margin:2.25rem 0 0;padding-top:1.5rem;border-top:1px solid var(--line)}.facts dt{font-size:.85rem;color:var(--muted)}.facts dd{margin:.15rem 0 0;font-weight:500}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1218;--panel:#141b24;--line:#232e3c;--text:#e3e9f1;--muted:#98a6b8;--signal:#6ab0f3;--alert:#e9a45c;--on:#08121c;}}:root[data-theme="dark"]{--bg:#0d1218;--panel:#141b24;--line:#232e3c;--text:#e3e9f1;--muted:#98a6b8;--signal:#6ab0f3;--alert:#e9a45c;--on:#08121c;}
+.hero{display:grid;gap:2rem 3rem;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center}
+.hero .facts{grid-column:1/-1}
+.stage{perspective:900px;height:20rem;display:flex;align-items:center;justify-content:center}
+.stack{position:relative;width:15rem;height:15rem;transform-style:preserve-3d;transform:rotateX(58deg) rotateZ(-38deg);transition:transform .15s ease-out}
+.layer{position:absolute;border:1.5px solid var(--signal);border-radius:14px;background-color:var(--panel);background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:28px 28px;box-shadow:0 22px 34px rgba(15,30,60,.22);display:flex;align-items:flex-end;padding:.8rem 1rem;font:700 .95rem var(--head);color:var(--signal)}
+.l1{inset:0;transform:translateZ(0)}
+.l2{inset:14%;transform:translateZ(48px)}
+.l3{inset:28%;transform:translateZ(96px);background-image:none;background-color:var(--signal);color:var(--on);padding:.5rem .7rem}
+.proj,.box{transition:transform .2s ease-out,box-shadow .2s,opacity .2s,border-color .2s}
+.proj:hover,.box:hover{box-shadow:0 14px 28px rgba(15,30,60,.16)}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.stage{height:16rem}.stack{width:12rem;height:12rem}}
+@media (prefers-reduced-motion:reduce){.stack,.proj,.box{transition:none}}
+.hero{grid-template-columns:1fr}
+#gl{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.wrap{position:relative;z-index:1}
+.box,.proj{background:color-mix(in srgb,var(--panel) 90%,transparent);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.hint{font-size:.9rem;color:var(--muted);margin:1rem 0 0}
+body{background:radial-gradient(60rem 28rem at 85% -8%,color-mix(in srgb,var(--signal) 12%,transparent),transparent),var(--bg)}
+.hero{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);align-items:center}
+.projects{grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.5rem}
+.tilt{position:relative;--gx:50%;--gy:50%}
+.tilt::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .2s;background:radial-gradient(circle at var(--gx) var(--gy),color-mix(in srgb,var(--signal) 16%,transparent),transparent 55%)}
+.tilt:hover::after{opacity:1}
+.pcard{transform-style:preserve-3d;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.6rem;width:100%;max-width:21rem;justify-self:center;box-shadow:0 26px 44px rgba(15,30,60,.16),0 4px 8px rgba(15,30,60,.06)}
+.badge{width:3.4rem;height:3.4rem;border-radius:12px;background:var(--signal);color:var(--on);display:grid;place-items:center;font:700 1.2rem var(--head);margin-bottom:1rem;transform:translateZ(36px)}
+.pcard h3{font:700 1.2rem var(--head);margin:0;transform:translateZ(24px)}
+.pcard .r{color:var(--signal);font-weight:500;margin:.15rem 0 .4rem;transform:translateZ(16px)}
+.pcard p{margin:.2rem 0 .9rem;color:var(--muted)}
+.pcard .learnline{margin:.9rem 0 0;font-size:.95rem}
+.fc{perspective:1200px;min-height:24rem;border-radius:12px}
+.fc.proj{background:none;border:0;-webkit-backdrop-filter:none;backdrop-filter:none}
+.inner{position:relative;height:100%;min-height:24rem;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.fc.flipped .inner{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1.4rem;display:flex;flex-direction:column;overflow:auto;box-shadow:0 14px 28px rgba(15,30,60,.12),0 2px 4px rgba(15,30,60,.06)}
+.back{transform:rotateY(180deg)}
+.lead .front{border-color:var(--signal)}
+.back ul{padding:0 0 0 1.1rem;margin:.6rem 0 1rem;font-size:.95rem}
+.flip{margin-top:auto;align-self:flex-start;font:inherit;font-weight:500;background:var(--signal);color:var(--on);border:0;padding:.55rem 1rem;border-radius:6px;cursor:pointer}
+.flip:hover{filter:brightness(1.1)}
+.front .tags{margin-bottom:1rem}
+@media (max-width:760px){.hero{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.inner{transition:none}}
+.scene{width:100%;max-width:min(30rem,100%);justify-self:center}
+#gl3d{display:block;width:100%;aspect-ratio:1/1;cursor:grab;touch-action:pan-y}
+.cap{text-align:center;font-size:.9rem;color:var(--muted);margin:.5rem 0 0}
+.fc,.inner{min-height:31rem}
+.pc{display:block;width:100%;height:11rem;margin:-.4rem 0 .6rem;cursor:grab;touch-action:pan-y}
+.rv{opacity:0;transform:perspective(900px) rotateX(12deg) translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+.hero{grid-template-columns:1fr}
+.hero .copy{max-width:44rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><strong>Sharvari Morey</strong><div><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#background">Background</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+<div class="copy">
+<h1>Sharvari Morey</h1>
+<p class="role">Aspiring Data Engineer</p>
+<p class="lede">Final-year B.Tech student in Industrial Internet of Things with hands-on experience in Python, SQL and Pandas. I build data pipelines, anomaly detection and sensor-based monitoring systems, and I am expanding into PySpark and Hadoop. Seeking a Data Engineering internship.</p>
+<div class="btns"><a class="btn main" href="#projects">View projects</a><a class="btn" href="#contact">Contact me</a></div>
+</div>
+</header>
+
+<section id="projects">
+<h2>Projects</h2>
+<p class="sub">Pick a tool to see which projects use it. Drag a 3D model to rotate it. Flip a card for the details.</p>
+<div class="chips" id="chips" role="group" aria-label="Filter projects by tool"></div>
+<div class="projects" id="projects-list">
+<article class="proj fc tilt lead" data-tags="Python,Pandas,Scikit-learn,Isolation Forest,Streamlit,Gemini API,JSON"><div class="inner"><div class="face front"><canvas class="pc" data-s="fraud" role="img" aria-label="3D network with one flagged anomaly node"></canvas><h3>Fraud-Spike Detector</h3><p class="one">An AI-powered fraud investigation system with a two-stage pipeline: statistical detection first, AI review second.</p><div class="tags"><span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>Isolation Forest</span><span>Streamlit</span><span>Gemini API</span><span>JSON</span></div><button class="flip" type="button">View details</button></div><div class="face back"><h3>Fraud-Spike Detector</h3><ul><li>Used Isolation Forest to find suspicious transaction and device-telemetry patterns before any AI investigation.</li><li>Processed transaction and POS telemetry with Pandas: retry counts, ping gaps, uptime, IP consistency, amount, merchant and device signals.</li><li>Sent flagged events to the Gemini API and got structured JSON back: fraud type, confidence, recommended action, reasoning and review status.</li><li>Added code-level guardrails and kept a human reviewing uncertain or higher-risk cases.</li><li>Built a Streamlit dashboard for telemetry, flagged events, results and audit logs.</li></ul><button class="flip" type="button">Back to summary</button></div></div></article>
+<article class="proj fc tilt" data-tags="Raspberry Pi Pico W,Python,IoT,Sensors"><div class="inner"><div class="face front"><canvas class="pc" data-s="dry" role="img" aria-label="3D clothes rack sliding under a roof while rain falls"></canvas><h3>DrySense: Smart Cloth Drying System</h3><p class="one">An IoT system that moves a clothes rack to shelter when it detects rain.</p><div class="tags"><span>Raspberry Pi Pico W</span><span>Python</span><span>IoT</span><span>Sensors</span></div><button class="flip" type="button">View details</button></div><div class="face back"><h3>DrySense: Smart Cloth Drying System</h3><ul><li>Built monitoring and automation with a rain sensor and a DHT11 temperature/humidity sensor on a Raspberry Pi Pico W.</li><li>Wrote sensor-driven logic that moves the rack to shelter when rain is detected and triggers alerts.</li><li>Handled hardware integration, sensor behavior, testing, troubleshooting and real-time environmental data.</li></ul><button class="flip" type="button">Back to summary</button></div></div></article>
+<article class="proj fc tilt" data-tags="Python,Networking"><div class="inner"><div class="face front"><canvas class="pc" data-s="net" role="img" aria-label="3D network of nodes with data packets moving"></canvas><h3>Network Security Monitoring System</h3><p class="one">A Python project that analyzes network activity to spot suspicious behavior.</p><div class="tags"><span>Python</span><span>Networking</span></div><button class="flip" type="button">View details</button></div><div class="face back"><h3>Network Security Monitoring System</h3><ul><li>Analyzed network activity and identified suspicious behavior.</li><li>Applied packet-monitoring and network-analysis concepts to understand threat indicators and pattern-based detection.</li></ul><button class="flip" type="button">Back to summary</button></div></div></article>
+<article class="proj fc tilt" data-tags="Java,Android Studio,SQLite"><div class="inner"><div class="face front"><canvas class="pc" data-s="mood" role="img" aria-label="3D animated sound bars"></canvas><h3>MoodSync: Mood Tracking App</h3><p class="one">An Android app that stores mood history and recommends songs.</p><div class="tags"><span>Java</span><span>Android Studio</span><span>SQLite</span></div><button class="flip" type="button">View details</button></div><div class="face back"><h3>MoodSync: Mood Tracking App</h3><ul><li>Built mood tracking with stored history and personalized song recommendations.</li><li>Used SQLite for local storage and wrote the logic for capturing and retrieving user entries.</li></ul><button class="flip" type="button">Back to summary</button></div></div></article>
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="grid2">
+<div class="box"><h3>Programming</h3><p>Python, SQL, Java (basics)</p></div>
+<div class="box"><h3>Data analysis</h3><p>Pandas, NumPy, data cleaning, preprocessing, exploratory data analysis, basic statistics</p></div>
+<div class="box"><h3>Databases</h3><p>MySQL, SQLite, DBMS</p></div>
+<div class="box"><h3>Machine learning</h3><p>Anomaly detection, Isolation Forest, classification concepts, model evaluation basics</p></div>
+<div class="box"><h3>AI and APIs</h3><p>LLM API integration, structured JSON responses, REST APIs, Streamlit</p></div>
+<div class="box"><h3>IoT and tools</h3><p>Raspberry Pi Pico W, sensors, real-time monitoring, Git, GitHub, VS Code</p></div>
+<div class="box learn"><h3>Currently learning</h3><p>PySpark, Hadoop, distributed data processing, Agile/Scrum</p></div>
+</div>
+</section>
+
+<section id="background">
+<h2>Background</h2>
+<div class="grid2">
+<div class="box"><h3>Education</h3><ul class="list">
+<li><strong>B.Tech, Industrial IoT</strong>, Prof. Ram Meghe Institute of Technology and Research, Badnera-Amravati. 2023 to 2027. CGPA 7.25</li>
+<li><strong>HSC, PCM (Computer Science)</strong>, Takhatmal English Junior College, Amravati. 2022 to 2023. 67.83%</li></ul></div>
+<div class="box"><h3>Certifications</h3><ul class="list">
+<li>Cloud Infrastructure AI Foundations, Oracle</li><li>Introduction to Python, Infosys</li><li>Python Essentials, Infosys</li><li>Cybersecurity Essentials, Cisco Networking Academy</li><li>Arduino and NodeMCU, Nu Intelligence Pvt. Ltd.</li></ul></div>
+<div class="box"><h3>Relevant coursework</h3><p>Machine Learning Fundamentals, Probability and Statistics, Data Structures, Database Management Systems, Cloud Computing, Computer Networks, IoT and IIoT, Embedded Systems</p></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p class="sub">Open to Data Engineering internship opportunities. Please get in touch.</p>
+<div class="contact">
+<a href="mailto:sharvarimorey760@gmail.com">sharvarimorey760@gmail.com</a>
+<a href="https://github.com/sharvarimorey760">GitHub</a>
+<a href="https://linkedin.com/in/sharvari-morey-a66915376">LinkedIn</a>
+</div>
+</section>
+
+<footer>Sharvari Deepak Morey</footer>
+</div>
+<script>
+(function(){
+var cards=[].slice.call(document.querySelectorAll('.proj')),box=document.getElementById('chips'),on=null;
+var all={};cards.forEach(function(c){c.dataset.tags.split(',').forEach(function(t){all[t]=1})});
+Object.keys(all).forEach(function(t){
+var b=document.createElement('button');b.type='button';b.className='chip';b.textContent=t;b.setAttribute('aria-pressed','false');
+b.addEventListener('click',function(){
+on=(on===t)?null:t;
+[].forEach.call(box.children,function(x){x.setAttribute('aria-pressed',String(x.textContent===on))});
+cards.forEach(function(c){var m=!on||c.dataset.tags.split(',').indexOf(on)>-1;c.classList.toggle('dim',!m)});
+});
+box.appendChild(b);
+});
+})();
+</script>
+<script>
+(function(){
+var calm=matchMedia('(prefers-reduced-motion:reduce)').matches,fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+[].forEach.call(document.querySelectorAll('.box'),function(b){b.classList.add('tilt')});
+[].forEach.call(document.querySelectorAll('.fc'),function(c){
+var f=c.querySelector('.front'),k=c.querySelector('.back');k.inert=true;
+[].forEach.call(c.querySelectorAll('.flip'),function(b){b.addEventListener('click',function(){
+var on=c.classList.toggle('flipped');f.inert=on;k.inert=!on;
+(on?k:f).querySelector('.flip').focus({preventScroll:true})})})});
+if(calm||!fine)return;
+[].forEach.call(document.querySelectorAll('.tilt'),function(el){
+var m=el.classList.contains('pcard')?10:6;
+el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+el.style.setProperty('--gx',x*100+'%');el.style.setProperty('--gy',y*100+'%');
+el.style.transform='perspective(1000px) rotateX('+((.5-y)*m)+'deg) rotateY('+((x-.5)*m)+'deg)'});
+el.addEventListener('pointerleave',function(){el.style.transform=''})});
+})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+if(!window.THREE)return;
+var calm=matchMedia('(prefers-reduced-motion:reduce)').matches,dpr=Math.min(window.devicePixelRatio||1,2),scenes=[];
+var B={
+fraud:function(G,M){var g=new THREE.IcosahedronGeometry(1.5,1);G.add(new THREE.LineSegments(new THREE.WireframeGeometry(g),M.l),new THREE.Points(g,M.p));
+var a=new THREE.Mesh(new THREE.SphereGeometry(.14,16,16),M.a);a.position.fromBufferAttribute(g.attributes.position,12);G.add(a);
+return function(t){var k=1+.35*Math.abs(Math.sin(t*2.5));a.scale.set(k,k,k)}},
+dry:function(G,M){var roof=new THREE.Mesh(new THREE.BoxGeometry(1.9,.08,1.3),M.m);roof.position.y=1;G.add(roof);
+var rack=new THREE.Group(),i;rack.add(new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(1.2,.45,.9)),M.l));
+for(i=-1;i<=1;i++){var b=new THREE.Mesh(new THREE.BoxGeometry(1.1,.04,.04),M.m);b.position.y=i*.14;rack.add(b)}
+rack.position.y=-.6;G.add(rack);
+var n=70,pos=new Float32Array(n*3);for(i=0;i<n;i++){pos[i*3]=(Math.random()-.5)*3.6;pos[i*3+1]=Math.random()*3-1.5;pos[i*3+2]=(Math.random()-.5)*1.4}
+var pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pos,3));G.add(new THREE.Points(pg,M.p));
+return function(t,dt){rack.position.x=1.1*Math.cos(t*.7);
+for(var i=0;i<n;i++){var y=pos[i*3+1]-dt*1.6,x=pos[i*3];if(y<-1.5||(Math.abs(x)<.95&&y<1.02))y=1.7+Math.random()*.4;pos[i*3+1]=y}
+pg.attributes.position.needsUpdate=true}},
+net:function(G,M){var n=8,ns=[],pk=[],lp=[],rp=[],i;G.add(new THREE.Mesh(new THREE.SphereGeometry(.26,20,20),M.m));
+for(i=0;i<n;i++){var an=i/n*Math.PI*2,v=new THREE.Vector3(Math.cos(an)*1.6,0,Math.sin(an)*1.6);ns.push(v);lp.push(0,0,0,v.x,v.y,v.z);
+var d=new THREE.Mesh(new THREE.SphereGeometry(.11,16,16),i===3?M.a:M.m);d.position.copy(v);G.add(d);
+var q=new THREE.Mesh(new THREE.SphereGeometry(.05,10,10),M.m);G.add(q);pk.push(q)}
+var lg=new THREE.BufferGeometry();lg.setAttribute('position',new THREE.Float32BufferAttribute(lp,3));G.add(new THREE.LineSegments(lg,M.l));
+for(i=0;i<=64;i++){var b=i/64*Math.PI*2;rp.push(Math.cos(b)*1.6,0,Math.sin(b)*1.6)}
+var rg=new THREE.BufferGeometry();rg.setAttribute('position',new THREE.Float32BufferAttribute(rp,3));G.add(new THREE.Line(rg,M.l));
+return function(t){for(var i=0;i<n;i++)pk[i].position.copy(ns[i]).multiplyScalar((t*.5+i/n)%1)}},
+mood:function(G,M){var bars=[],n=28,i;for(i=0;i<n;i++){var b=new THREE.Mesh(new THREE.BoxGeometry(.13,1,.13),M.m),an=i/n*Math.PI*2;b.position.set(Math.cos(an)*1.5,0,Math.sin(an)*1.5);G.add(b);bars.push(b)}
+return function(t){for(var i=0;i<n;i++)bars[i].scale.y=.25+.95*Math.abs(Math.sin(t*1.8+i*.55)*Math.cos(t*.9+i*.2))}}
+};
+function render(s){s.G.rotation.set(s.rx,s.ry,0);s.R.render(s.S,s.C)}
+function colors(){var cs=getComputedStyle(document.documentElement),sg=cs.getPropertyValue('--signal').trim(),al=cs.getPropertyValue('--alert').trim();
+scenes.forEach(function(s){s.M.l.color.set(sg);s.M.p.color.set(sg);s.M.m.color.set(sg);s.M.a.color.set(al)})}
+function sizeAll(){scenes.forEach(function(s){var w=s.cv.clientWidth,h=s.cv.clientHeight;if(!w||!h)return;s.R.setSize(w,h,false);s.C.aspect=w/h;s.C.updateProjectionMatrix();if(calm)render(s)})}
+function mk(cv,key){var R;try{R=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true})}catch(e){cv.style.display='none';return}
+R.setPixelRatio(dpr);var S=new THREE.Scene(),C=new THREE.PerspectiveCamera(40,1,.1,50);C.position.set(0,0,6.4);
+var G=new THREE.Group();S.add(G);
+var M={l:new THREE.LineBasicMaterial({transparent:true,opacity:.55}),p:new THREE.PointsMaterial({size:.08,transparent:true}),m:new THREE.MeshBasicMaterial({transparent:true,opacity:.92}),a:new THREE.MeshBasicMaterial()};
+var s={cv:cv,R:R,S:S,C:C,G:G,M:M,up:B[key](G,M),rx:.5,ry:0,vy:0,drag:false,lx:0,vis:true};scenes.push(s);
+cv.addEventListener('pointerdown',function(e){s.drag=true;s.lx=e.clientX;cv.setPointerCapture(e.pointerId);cv.style.cursor='grabbing'});
+cv.addEventListener('pointermove',function(e){if(!s.drag)return;s.vy=(e.clientX-s.lx)*.01;s.ry+=s.vy;s.lx=e.clientX;if(calm)render(s)});
+function up(){s.drag=false;cv.style.cursor='grab'}
+cv.addEventListener('pointerup',up);cv.addEventListener('pointercancel',up);
+if('IntersectionObserver' in window)new IntersectionObserver(function(en){s.vis=en[0].isIntersecting}).observe(cv)}
+[].forEach.call(document.querySelectorAll('.pc'),function(cv){mk(cv,cv.dataset.s)});
+colors();sizeAll();
+matchMedia('(prefers-color-scheme:dark)').addEventListener('change',function(){colors();if(calm)scenes.forEach(render)});
+addEventListener('resize',sizeAll);
+if(calm){scenes.forEach(function(s){s.up(2,0);render(s)})}
+else{var last=performance.now(),t=0;(function loop(now){var dt=Math.min((now-last)/1000,.05);last=now;t+=dt;
+scenes.forEach(function(s){if(!s.vis)return;if(!s.drag){s.vy*=.95;s.ry+=s.vy+.004}s.up(t,dt);render(s)});requestAnimationFrame(loop)})(last)}
+if(!calm&&'IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){var el=e.target;el.classList.add('in');io.unobserve(el);setTimeout(function(){el.classList.remove('rv','in')},800)}})},{threshold:.12});
+[].forEach.call(document.querySelectorAll('.fc,.box'),function(el){el.classList.add('rv');io.observe(el)})}
+})();
+</script>
+</body>
+</html>
